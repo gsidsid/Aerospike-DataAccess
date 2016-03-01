@@ -1,0 +1,85 @@
+{
+  "defaultNameSpace":"test",
+  "aerospikeHosts": [
+    {
+      "name": "localhost",
+      "port": 3000
+    }
+  ],
+  "clientPolicy": {
+    "user": "",
+    "password": "",
+    "timeout": 2000,
+    "maxThreads": 300,
+    "maxSocketIdle": 55,
+    "tendInterval": 1000,
+    "failIfNotConnected": true,
+    "readPolicyDefault": {
+      "priority": "DEFAULT",
+      "consistencyLevel": "CONSISTENCY_ONE",
+      "replica": "MASTER",
+      "timeout": 500,
+      "maxRetries": 4,
+      "sleepBetweenRetries": 150,
+      "sendKey": false
+    },
+    "writePolicyDefault": {
+      "priority": "DEFAULT",
+      "consistencyLevel": "CONSISTENCY_ONE",
+      "replica": "MASTER",
+      "timeout": 0,
+      "maxRetries": 1,
+      "sleepBetweenRetries": 500,
+      "sendKey": true,
+      "recordExistsAction": "UPDATE",
+      "generationPolicy": "NONE",
+      "commitLevel": "COMMIT_ALL",
+      "generation": 0,
+      "expiration": 0,
+      "respondAllOps": false
+    },
+    "scanPolicyDefault": {
+      "priority": "HIGH",
+      "consistencyLevel": "CONSISTENCY_ONE",
+      "replica": "MASTER",
+      "timeout": 1500,
+      "maxRetries": 0,
+      "sleepBetweenRetries": 500,
+      "sendKey": false,
+      "scanPercent": 100,
+      "maxConcurrentNodes": 0,
+      "concurrentNodes": false,
+      "includeBinData": true,
+      "includeLDT": false,
+      "failOnClusterChange": false
+    },
+    "queryPolicyDefault": {
+      "priority": "HIGH",
+      "consistencyLevel": "CONSISTENCY_ONE",
+      "replica": "MASTER",
+      "timeout": 0,
+      "maxRetries": 0,
+      "sleepBetweenRetries": 500,
+      "sendKey": false,
+      "maxConcurrentNodes": 0,
+      "recordQueueSize": 5000
+    },
+    "batchPolicyDefault": {
+      "priority": "DEFAULT",
+      "consistencyLevel": "CONSISTENCY_ONE",
+      "replica": "MASTER",
+      "timeout": 0,
+      "maxRetries": 1,
+      "sleepBetweenRetries": 500,
+      "sendKey": false,
+      "maxConcurrentThreads": 1,
+      "useBatchDirect": false,
+      "allowInline": true
+    },
+    "infoPolicyDefault": {
+      "timeout": 1000
+    },
+    "sharedThreadPool": false,
+    "requestProleReplicas": false
+  }
+}
