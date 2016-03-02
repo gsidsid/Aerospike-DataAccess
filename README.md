@@ -1,6 +1,6 @@
 # Aerospike-DataAccess
 
-This is a simple Aerospike data access library that helps expedite the development of Aerospike applications. You only need data model classes and the provided generic repository class to store and retrieve data from the Aerospike database. The main advantages of this approach are: 
+This is a simple Aerospike data access library that helps expedite the development of Aerospike applications. You only need data model classes and the provided generic repository class to store and retrieve data from an Aerospike database. The main advantages of this approach are: 
 
 
 Ease of Use:
@@ -18,7 +18,7 @@ Ease of Use:
 
 Performance:
 
-1. Uses HashMap, bins, as an internal data structure to store attribute and value pairs. This approach provides flexibility in creating an entity object using a constructor with HashMap that is obtained from Aerospike client record object. There is no need to duplicate data. Bins in the record are directly mapped to an entity object using reflection without requiring a row mapper. This eliminates developing an unnecessary mapper and additional memory allocation. Also uses HashMap to update a record.
+1. Uses HashMap, bins, as an internal data structure to store attribute and value pairs. This approach provides flexibility in creating an entity object using a constructor with a HashMap that is obtained from the Aerospike client's record object. There is no need to duplicate data. Bins in the record are directly mapped to an entity object using reflection without requiring a row mapper. This eliminates the need for both a mapper and additional memory allocation. This also uses HashMap to update records.
 
 2. Keeps track of changed fields for efficient update operations. For example, if an user object is retrieved from data base and user password is changed, an update method call will update only the password bin's value.
 
