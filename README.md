@@ -1,4 +1,4 @@
-# Aerospike-DataAccess
+# aaerospike-data-access
 
 This is a simple Aerospike data access library that helps expedite the development of Aerospike applications. You only need data model classes and the provided generic repository class to store and retrieve data from an Aerospike database. The main advantages of this approach are: 
 
